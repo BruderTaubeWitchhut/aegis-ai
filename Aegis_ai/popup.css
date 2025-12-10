@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 380px;
+  min-height: 500px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+}
+
+.container {
+  background: white;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.tagline {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.loading-state, .results-state, .safe-state {
+  padding: 20px;
+  flex: 1;
+}
+
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.trust-score-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.trust-score {
+  font-size: 48px;
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 5px;
+}
+
+.trust-score.high { color: #10b981; }
+.trust-score.medium { color: #f59e0b; }
+.trust-score.low { color: #ef4444; }
+
+.trust-label {
+  font-size: 14px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.risk-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px auto;
+  width: fit-content;
+  display: block;
+}
+
+.risk-badge.safe { background: #d1fae5; color: #065f46; }
+.risk-badge.low { background: #fef3c7; color: #92400e; }
+.risk-badge.medium { background: #fed7aa; color: #9a3412; }
+.risk-badge.high { background: #fecaca; color: #991b1b; }
+
+.section {
+  margin: 20px 0;
+}
+
+.section h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.flags-list {
+  list-style: none;
+  padding: 0;
+}
+
+.flags-list li {
+  padding: 8px 12px;
+  background: #fef2f2;
+  border-left: 3px solid #ef4444;
+  margin-bottom: 8px;
+  font-size: 13px;
+  border-radius: 4px;
+}
+
+.flags-list.safe li {
+  background: #f0fdf4;
+  border-left-color: #10b981;
+}
+
+.risk-details {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #555;
+  background: #f9fafb;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #667eea;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #5568d3;
+}
+
+.btn-secondary {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.btn-secondary:hover {
+  background: #d1d5db;
+}
+
+.btn-premium {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-premium:hover {
+  opacity: 0.9;
+}
+
+.premium-banner {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.premium-banner p {
+  font-size: 12px;
+  color: #78350f;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.safe-state {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.safe-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.safe-state h2 {
+  color: #10b981;
+  margin-bottom: 10px;
+}
+
+.safe-state p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.footer {
+  display: flex;
+  border-top: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.footer-btn {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  color: #666;
+  transition: background 0.2s;
+}
+
+.footer-btn:hover {
+  background: #e5e7eb;
+}
+
+.footer-btn:not(:last-child) {
+  border-right: 1px solid #e5e7eb;
+}

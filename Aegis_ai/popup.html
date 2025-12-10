@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🛡️ Aegis.ai</h1>
+      <p class="tagline">Scam Protection Shield</p>
+    </div>
+    
+    <div id="loadingState" class="loading-state">
+      <div class="spinner"></div>
+      <p>Scanning page...</p>
+    </div>
+    
+    <div id="resultsState" class="results-state" style="display:none;">
+      <div class="trust-score-container">
+        <div class="trust-score" id="trustScore">--</div>
+        <div class="trust-label">Trust Score</div>
+      </div>
+      
+      <div class="risk-badge" id="riskBadge"></div>
+      
+      <div class="section">
+        <h3>🚩 Red Flags Detected</h3>
+        <ul id="redFlagsList" class="flags-list"></ul>
+      </div>
+      
+      <div class="section">
+        <h3>📊 Risk Analysis</h3>
+        <div id="riskDetails" class="risk-details"></div>
+      </div>
+      
+      <div class="actions">
+        <button id="rescanBtn" class="btn btn-primary">🔄 Re-scan Page</button>
+        <button id="markSafeBtn" class="btn btn-secondary">✓ Mark as Safe</button>
+      </div>
+      
+      <div class="premium-banner">
+        <p>🌟 Upgrade to Premium for real-time AI scanning, financial fraud detection, and scan history dashboard</p>
+        <button id="upgradeBtn" class="btn btn-premium">Upgrade Now</button>
+      </div>
+    </div>
+    
+    <div id="safeState" class="safe-state" style="display:none;">
+      <div class="safe-icon">✅</div>
+      <h2>Page Marked Safe</h2>
+      <p>This page is in your safe list</p>
+      <button id="removeSafeBtn" class="btn btn-secondary">Remove from Safe List</button>
+    </div>
+    
+    <div class="footer">
+      <button id="historyBtn" class="footer-btn">📜 History</button>
+      <button id="settingsBtn" class="footer-btn">⚙️ Settings</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
